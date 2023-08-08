@@ -42,17 +42,9 @@ public class Main {
                 Cat cat = reader.findCat((long) numberFromConsole);
                 System.out.println(cat);
             }
-
             reader.printInstruction();
-
             if (scanner.nextInt() == 0) return;
         }
-
-
-
-
-
-
 //        reader.printCats();
 //        System.out.println(reader.findCat(2L));
 //        Cat cat = new Cat(3L, "New Cat", "New Breed", "New Color");

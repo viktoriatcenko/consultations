@@ -32,7 +32,7 @@ public class ReaderImpl implements Reader {
     @Override
     public Cat[] addCat(Cat newCat) {
         Cat[] currentCats = catsFromFile();
-        currentCats[currentCats.length] = newCat;
+        currentCats[countCats(currentCats) + 1] = newCat;
         writeCatsInFile(currentCats);
         return currentCats;
     }
@@ -70,10 +70,9 @@ public class ReaderImpl implements Reader {
     }
 
     public void writeCatsInFile(Cat[] cats) {
-        File file;
+        File file = new File(fileName);
         FileOutputStream fileOutStream = null;
         try {
-            file = new File(fileName);
             fileOutStream = new FileOutputStream(file);
                 for (Cat c : cats) {
                     if (c != null) {
@@ -93,9 +92,9 @@ public class ReaderImpl implements Reader {
                         }
                     }
                 }
-//            fileOutStream.flush();
-//            fileOutStream.close();
-//            System.out.println("File writing done.");
+            fileOutStream.flush();
+            fileOutStream.close();
+            System.out.println("File writing done.");
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
