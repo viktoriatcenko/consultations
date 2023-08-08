@@ -1,4 +1,4 @@
-package models;
+package lesson_01.models;
 
 public class Channel {
 

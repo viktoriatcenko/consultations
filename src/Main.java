@@ -1,7 +1,7 @@
-import models.Channel;
-import models.ControllerImpl;
-import models.Show;
-import models.Televisor;
+import lesson_01.models.Channel;
+import lesson_01.models.ControllerImpl;
+import lesson_01.models.Show;
+import lesson_01.models.Televisor;
 
 import java.util.Scanner;
 

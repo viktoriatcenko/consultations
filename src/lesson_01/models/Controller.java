@@ -1,4 +1,4 @@
-package models;
+package lesson_01.models;
 
 public interface Controller {
     //* Интерфейс Пульт должен иметь внутри себя ссылку на Телевизор и три метода:
