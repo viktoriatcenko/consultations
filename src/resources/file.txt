@@ -12,3 +12,13 @@ Black
 New Cat
 New Breed
 New Color
+
+4
+Vasya
+Dvornyaga
+Orange
+
+5
+Misha
+Dvornyaga
+orange

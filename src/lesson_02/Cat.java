@@ -1,5 +1,7 @@
 package lesson_02;
 
+import java.util.Objects;
+
 public class Cat {
     private Long id;
     private String name;
@@ -56,5 +58,27 @@ public class Cat {
                 ", breed='" + breed + '\'' +
                 ", colour='" + colour + '\'' +
                 ' ';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Cat cat = (Cat) o;
+
+        if (!Objects.equals(id, cat.id)) return false;
+        if (!Objects.equals(name, cat.name)) return false;
+        if (!Objects.equals(breed, cat.breed)) return false;
+        return Objects.equals(colour, cat.colour);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id != null ? id.hashCode() : 0;
+        result = 31 * result + (name != null ? name.hashCode() : 0);
+        result = 31 * result + (breed != null ? breed.hashCode() : 0);
+        result = 31 * result + (colour != null ? colour.hashCode() : 0);
+        return result;
     }
 }
