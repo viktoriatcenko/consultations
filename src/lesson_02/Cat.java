@@ -2,7 +2,7 @@ package lesson_02;
 
 import java.util.Objects;
 
-public class Cat {
+public class Cat extends Object {
     private Long id;
     private String name;
     private String breed;

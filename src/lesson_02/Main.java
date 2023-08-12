@@ -2,7 +2,6 @@ package lesson_02;
 
 import lesson_02.util.ReaderImpl;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 
